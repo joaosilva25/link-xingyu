@@ -36,7 +36,7 @@ export default function Hero() {
           {/* Subtitle */}
           <div className='flex flex-col gap-4 mb-6'>
             <p className="text-black/70 md:pr-32 leading-7  flex items-center justify-center md:justify-start">
-            Referência em semijoias premium há mais de 20 anos, com acabamento impecável e preços até 5x menores direto da fábrica. Confira nosso catálogo.
+            Referência em semijoias premium há mais de 20 anos, com acabamento impecável e preços até 5x menores direto da fábrica.
             </p>
           </div>
 
