@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
 
           <div
-            className={`mt-8 flex justify-center md:justify-start transition-all duration-500 ${
+            className={`mt-8 flex md:hidden justify-center md:justify-start transition-all duration-500 ${
               showScrollHint ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
             }`}
           >
