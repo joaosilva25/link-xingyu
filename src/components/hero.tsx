@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/5 hidden md:block"></div>
       </div>
       {/* Content */}
-      <div className="relative z-10 px-6 px-16  3xl:px-40 mx-auto md:py-30 w-full grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+      <div className="relative z-10 px-6 md:px-16 2xl:px-40 mx-auto md:py-30 w-full grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
 
         {/* LEFT */}
         <div className="text-white">
