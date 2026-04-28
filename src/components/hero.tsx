@@ -1,11 +1,11 @@
 import { ArrowDownRight, Gem, Sparkles } from 'lucide-react';
 import logo from '../assets/XY.png';
-import heroimg from '../assets/BANNERHero.png';
-import heroMobile from '../assets/BANNERMobile.png';
+import heroimg from '../assets/BANNERHero2.png';
+import heroMobile from '../assets/BANNERMobile2.png';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[95vh] py-24 md:py-0 md:min-h-[80vh] overflow-hidden bg-[#FFF4EF]">
+    <section className="relative min-h-[95vh] py-24 md:py-0 md:min-h-[80vh] overflow-hidden bg-white">
 
       <div className="absolute inset-0">
         <img
