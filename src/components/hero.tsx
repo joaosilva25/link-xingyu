@@ -1,9 +1,22 @@
-import { ArrowDownRight, Gem, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowDownRight, Gem, Sparkles } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import logo from '../assets/XY.png';
 import heroimg from '../assets/BANNERHero2.png';
 import heroMobile from '../assets/BANNERMobile2.png';
 
 export default function Hero() {
+  const [showScrollHint, setShowScrollHint] = useState(true);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollHint(window.scrollY <= 1);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <section className="relative min-h-[95vh] py-24 md:py-0 md:min-h-[80vh] overflow-hidden bg-white">
 
@@ -20,13 +33,13 @@ export default function Hero() {
 
         {/* LEFT */}
         <div className="text-white">
-        <div className="flex items-center justify-center md:justify-start relative">
-          <img
+          <div className="flex items-center justify-center md:justify-start relative">
+            <img
               src={logo}
               alt="Logo"
               className="relative z-10 w-[60px]  mb-6 object-cover"
             />
-        </div>
+          </div>
 
           {/* Title */}
           <h1 className="text-5xl md:text-7xl text-orange-500  font-regular leading-[1.0] tracking-tight mb-8" style={{ fontFamily: 'Joly Display, sans-serif' }}>
@@ -36,7 +49,7 @@ export default function Hero() {
           {/* Subtitle */}
           <div className='flex flex-col gap-4 mb-6'>
             <p className="text-black/70 md:pr-32 leading-7  flex items-center justify-center md:justify-start">
-            Referência em semijoias premium há mais de 20 anos, com acabamento impecável e preços até 5x menores direto da fábrica.
+              Referência em semijoias premium há mais de 20 anos, com acabamento impecável e preços até 5x menores direto da fábrica.
             </p>
           </div>
 
@@ -55,21 +68,35 @@ export default function Hero() {
             </a>
           </div>
 
+          <div
+            className={`mt-14 mb-1 flex justify-center md:justify-start transition-all duration-500 ${
+              showScrollHint ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+            }`}
+          >
+            <button
+              type="button"
+              aria-label="Rolar para baixo"
+              className="h-12 w-12 rounded-full border border-orange-200 bg-gradient-to-b from-white via-white to-white/60 shadow-[0_10px_24px_rgba(255,255,255,0.75)] backdrop-blur-sm animate-bounce cursor-default flex items-center justify-center"
+            >
+              <ArrowDown className="h-5 w-5 text-orange-400" strokeWidth={2} />
+            </button>
+          </div>
+
         </div>
 
       </div>
-             {/* Mobile Image */}
-          <div className="md:hidden mt-2">
-            <img
-              src={heroMobile}
-              alt="Hero Mobile"
-              className="w-full h-[450px] object-cover object-bottom"
-            />
-          </div>
+      {/* Mobile Image */}
+      <div className="md:hidden mt-2">
+        <img
+          src={heroMobile}
+          alt="Hero Mobile"
+          className="w-full h-[450px] object-cover object-bottom"
+        />
+      </div>
 
       {/* Scrolling Banner */}
       <div className="w-full bg-white border border-orange-200 backdrop-blur-md py-4 overflow-hidden md:absolute md:bottom-0 md:left-0" style={
-        {backdropFilter: 'blur(15px)'}
+        { backdropFilter: 'blur(15px)' }
       }>
         <div className="flex animate-marquee whitespace-nowrap">
           {[...Array(6)].map((_, i) => (
