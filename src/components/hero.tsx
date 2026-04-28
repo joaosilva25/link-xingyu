@@ -5,7 +5,7 @@ import heroMobile from '../assets/BANNERMobile.png';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[95vh] py-24 md:py-0 md:min-h-[80vh] overflow-hidden bg-[#F2E6E1]">
+    <section className="relative min-h-[95vh] py-24 md:py-0 md:min-h-[80vh] overflow-hidden bg-[#FFF4EF]">
 
       <div className="absolute inset-0">
         <img

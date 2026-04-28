@@ -2,7 +2,7 @@ import logo from '../assets/XY.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-100 py-6">
+    <footer className="bg-white py-5">
       <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col items-center gap-4">
         <div className="flex flex-col items-center gap-3">
           <img src={logo} alt="Xingyu" className="w-18 h-18 object-contain" />
