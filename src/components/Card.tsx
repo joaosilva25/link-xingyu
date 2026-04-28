@@ -8,7 +8,7 @@ interface CardProps {
 export default function Card({ imageSrc, link }: CardProps) {
   return (
     <div
-      className="w-full h-[400px] rounded-3xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg relative group cursor-pointer border-6 border-orange-200"
+      className="w-full h-[200px] md:h-[400px] rounded-3xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg relative group cursor-pointer border-4 border-orange-200"
       style={{ backgroundImage: `url(${imageSrc})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
       onClick={() => link && window.open(link, '_blank')}
     >
