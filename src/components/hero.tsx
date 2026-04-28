@@ -5,7 +5,7 @@ import heroMobile from '../assets/BANNERMobile.png';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[95vh] py-24 md:py-0 md:min-h-[80vh] overflow-hidden bg-[#F5F5F5]">
+    <section className="relative min-h-[95vh] py-24 md:py-0 md:min-h-[80vh] overflow-hidden bg-white">
 
       <div className="absolute inset-0">
         <img
@@ -35,7 +35,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <div className='flex flex-col gap-4 mb-6'>
-            <p className="text-black/70 md:pr-32 leading-7  flex items-center justify-center md:justify-start ">
+            <p className="text-black/70 md:pr-32 leading-7  flex items-center justify-center md:justify-start">
               Há mais de 20 anos como referência em semijoias, com qualidade premium, acabamento impecável e preços até 5x menores direto da fábrica. Acesse nosso catálogo exclusivo e descubra o padrão que conquista milhares de clientes
             </p>
           </div>
