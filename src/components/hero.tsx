@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
 
           <div
-            className={`mt-14 mb-1 flex justify-center md:justify-start transition-all duration-500 ${
+            className={`mt-12 flex justify-center md:justify-start transition-all duration-500 ${
               showScrollHint ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
             }`}
           >
@@ -86,7 +86,7 @@ export default function Hero() {
 
       </div>
       {/* Mobile Image */}
-      <div className="md:hidden mt-2">
+      <div className="md:hidden">
         <img
           src={heroMobile}
           alt="Hero Mobile"
