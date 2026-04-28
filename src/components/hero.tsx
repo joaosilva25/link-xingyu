@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowDownRight, Gem, Sparkles } from 'lucide-react';
+import { ArrowDownRight, Gem, Mouse, Sparkles } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import logo from '../assets/XY.png';
 import heroimg from '../assets/BANNERHero2.png';
@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
 
           <div
-            className={`mt-12 flex justify-center md:justify-start transition-all duration-500 ${
+            className={`mt-8 flex justify-center md:justify-start transition-all duration-500 ${
               showScrollHint ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
             }`}
           >
@@ -78,7 +78,7 @@ export default function Hero() {
               aria-label="Rolar para baixo"
               className="h-12 w-12 rounded-full border border-orange-200 bg-gradient-to-b from-white via-white to-white/60 shadow-[0_10px_24px_rgba(255,255,255,0.75)] backdrop-blur-sm animate-bounce cursor-default flex items-center justify-center"
             >
-              <ArrowDown className="h-5 w-5 text-orange-400" strokeWidth={2} />
+              <Mouse className="h-5 w-5 text-orange-400" strokeWidth={2} />
             </button>
           </div>
 
