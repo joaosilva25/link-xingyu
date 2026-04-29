@@ -6,6 +6,7 @@ import banner4 from '../assets/BANNER 04.png';
 import banner5 from '../assets/BANNER 05.png';
 import banner6 from '../assets/BANNER 06.png';
 import banner7 from '../assets/BANNER 07.png';
+import banner10 from '../assets/BANNER 10.png';
 
 export default function Links() {
   return (
@@ -19,6 +20,7 @@ export default function Links() {
         <Card imageSrc={banner5} link="https://chat.whatsapp.com/FzQcBGHEokbHFCfEjjWNJE" />
         <Card imageSrc={banner6} link="https://www.xingyu.com.br/collections/outlet" />
         <Card imageSrc={banner7} link="https://www.xingyu.com.br/collections/venda-mais" />
+        <Card imageSrc={banner10} link="https://wa.me/+5511925694819" />
       </div>
     </section>
   );
