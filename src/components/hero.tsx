@@ -18,84 +18,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[95vh] py-24 md:py-0 md:min-h-[80vh] overflow-hidden bg-white">
-
-      <div className="absolute inset-0">
-        <img
-          src={heroimg}
-          alt="Hero"
-          className="w-full h-full object-cover object-center hidden md:block"
-        />
-        <div className="absolute inset-0 bg-black/5 hidden md:block"></div>
-      </div>
-      {/* Content */}
-      <div className="relative z-10 px-6 md:px-20 mx-auto md:py-30 w-full grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
-
-        {/* LEFT */}
-        <div className="text-white">
-          <div className="flex items-center justify-center md:justify-start relative">
-            <img
-              src={logo}
-              alt="Logo"
-              className="relative z-10 w-[60px]  mb-6 object-cover"
-            />
-          </div>
-
-          {/* Title */}
-          <h1 className="text-5xl md:text-7xl text-orange-500  font-regular leading-[1.0] tracking-tight mb-8" style={{ fontFamily: 'Joly Display, sans-serif' }}>
-            Referência em <br></br>Semijoias no Brasil
-          </h1>
-
-          {/* Subtitle */}
-          <div className='flex flex-col gap-4 mb-6'>
-            <p className="text-black/70 md:pr-32 leading-7  flex items-center justify-center md:justify-start">
-              Referência em semijoias premium há mais de 20 anos, com acabamento impecável e preços até 5x menores direto da fábrica.
-            </p>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex items-center justify-center md:justify-start gap-6 mt-10">
-
-            <a
-              href="https://chat.whatsapp.com/GgiaeKuxGMB5uSZakNWG2y"
-              target="_blank"
-              className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-orange-300 to-orange-400 border border-orange-300 text-white px-8 py-4 rounded-2xl font-medium"
-            >
-              <span className="text-sm tracking-wide uppercase">Acessar grupo exclusivo</span>
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white">
-                <ArrowDownRight className="w-4 h-4 text-orange-400 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
-              </div>
-            </a>
-          </div>
-
-          <div
-            className={`mt-8 flex md:hidden justify-center md:justify-start transition-all duration-500 ${
-              showScrollHint ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
-            }`}
-          >
-            <button
-              type="button"
-              aria-label="Rolar para baixo"
-              className="h-12 w-12 rounded-full border border-orange-200 bg-gradient-to-b from-white via-white to-white/60 shadow-[0_10px_24px_rgba(255,255,255,0.75)] backdrop-blur-sm animate-bounce cursor-default flex items-center justify-center"
-            >
-              <Mouse className="h-5 w-5 text-orange-400" strokeWidth={2} />
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-      {/* Mobile Image */}
-      <div className="md:hidden">
-        <img
-          src={heroMobile}
-          alt="Hero Mobile"
-          className="w-full h-[450px] object-cover object-bottom"
-        />
-      </div>
-
-      {/* Scrolling Banner */}
-      <div className="w-full bg-white border border-orange-200 backdrop-blur-md py-4 overflow-hidden md:absolute md:bottom-0 md:left-0" style={
+    <>
+      <div className="w-full bg-white border border-orange-200 backdrop-blur-md py-4 overflow-hidden fixed top-0 left-0 right-0 z-50" style={
         { backdropFilter: 'blur(15px)' }
       }>
         <div className="flex animate-marquee whitespace-nowrap">
@@ -122,6 +46,60 @@ export default function Hero() {
         </div>
       </div>
 
-    </section>
+      <section className="relative min-h-[60vh] pt-24 md:pt-0 md:min-h-[80vh] overflow-hidden bg-white">
+
+        <div className="absolute inset-0">
+          <img
+            src={heroimg}
+            alt="Hero"
+            className="w-full h-full object-cover object-center hidden md:block"
+          />
+          <div className="absolute inset-0 bg-black/5 hidden md:block"></div>
+        </div>
+        {/* Content */}
+        <div className="relative z-10 mt-6 px-6 md:px-20 mx-auto md:py-30 w-full grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+
+          {/* LEFT */}
+          <div className="text-white">
+            <div className="flex items-center justify-center md:justify-start relative">
+              <img
+                src={logo}
+                alt="Logo"
+                className="relative z-10 w-[60px]  mb-6 object-cover"
+              />
+            </div>
+
+            {/* Title */}
+            <h1 className="text-5xl md:text-7xl text-orange-500  font-regular leading-[1.0] tracking-tight mb-8" style={{ fontFamily: 'Joly Display, sans-serif' }}>
+              Referência em <br></br>Semijoias
+            </h1>
+
+            {/* Subtitle */}
+            <div className='flex flex-col gap-4 mb-6'>
+              <p className="text-black/70 md:pr-32 leading-7  flex items-center justify-center md:justify-start">
+                Referência em semijoias premium há mais de 20 anos, com acabamento impecável e preços até 5x menores direto da fábrica.
+              </p>
+            </div>
+            <div
+              className={`mt-0 flex md:hidden justify-center md:justify-start transition-all duration-500 ${
+                showScrollHint ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+              }`}
+            >
+              <button
+                type="button"
+                aria-label="Rolar para baixo"
+                className="h-12 w-12 rounded-full mt-4 border border-orange-200 bg-gradient-to-b from-white via-white to-white/60 shadow-[0_10px_24px_rgba(255,255,255,0.75)] backdrop-blur-sm animate-bounce cursor-default flex items-center justify-center"
+              >
+                <Mouse className="h-5 w-5 text-orange-400" strokeWidth={2} />
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+    
+
+      </section>
+    </>
   );
 }
