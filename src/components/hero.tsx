@@ -87,7 +87,7 @@ export default function Hero() {
               <button
                 type="button"
                 aria-label="Rolar para baixo"
-                className="h-12 w-12 rounded-full mt-4 mb-4 border border-orange-200 bg-gradient-to-b from-white via-white to-white/60 shadow-[0_10px_24px_rgba(255,255,255,0.75)] backdrop-blur-sm animate-bounce cursor-default flex items-center justify-center"
+                className="h-12 w-12 rounded-full mt-2 mb-6 border border-orange-200 bg-gradient-to-b from-white via-white to-white/60 shadow-[0_10px_24px_rgba(255,255,255,0.75)] backdrop-blur-sm animate-bounce cursor-default flex items-center justify-center"
               >
                 <Mouse className="h-5 w-5 text-orange-400" strokeWidth={2} />
               </button>
