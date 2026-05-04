@@ -56,7 +56,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black/5 hidden md:block"></div>
         </div>
         {/* Content */}
-        <div className="relative z-10 mt-2 px-6 md:px-20 mx-auto md:py-30 w-full grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+        <div className="relative z-10 mt-1 px-6 md:px-20 mx-auto md:py-30 w-full grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
 
           {/* LEFT */}
           <div className="text-white">
@@ -64,7 +64,7 @@ export default function Hero() {
               <img
                 src={logo}
                 alt="Logo"
-                className="relative z-10 w-[60px]  mb-6 object-cover"
+                className="relative z-10 w-[60px] mb-6 object-cover"
               />
             </div>
 
