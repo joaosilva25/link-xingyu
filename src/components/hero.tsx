@@ -1,8 +1,7 @@
-import { ArrowDownRight, Gem, Mouse, Sparkles } from 'lucide-react';
+import { Gem, Mouse, Sparkles } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import logo from '../assets/XY.png';
 import heroimg from '../assets/BANNERHero2.png';
-import heroMobile from '../assets/BANNERMobile2.png';
 
 export default function Hero() {
   const [showScrollHint, setShowScrollHint] = useState(true);
