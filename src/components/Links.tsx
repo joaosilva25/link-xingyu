@@ -13,7 +13,6 @@ export default function Links() {
     <section id="links" className="bg-white">
       <div className="max-w-6xl mx-auto gap-12 flex flex-col pb-4 md:pb-24 pt-0 md:pt-14 px-2">
         
-        <Card imageSrc={banner1} link="https://chat.whatsapp.com/GgiaeKuxGMB5uSZakNWG2y" />
         <Card imageSrc={banner2} link="https://www.xingyu.com.br/" />
         <Card imageSrc={banner3} link="https://www.xingyu.com.br/collections/rivieiras" />
         <Card imageSrc={banner4} link="https://chat.whatsapp.com/IvudTWrc6Uz09OBCZR1SGT" />
