@@ -1,5 +1,6 @@
 import Card from './Card';
 import banner1 from '../assets/BANNERPRINCIPAL.png';
+import bannerAdded from '../assets/BANNER BIO - DESK2.jpg';
 import banner2 from '../assets/BANNER 02.png';
 import banner3 from '../assets/BANNER 03.png';
 import banner4 from '../assets/BANNER 04.png';
@@ -13,6 +14,7 @@ export default function Links() {
     <section id="links" className="bg-white">
       <div className="max-w-6xl mx-auto gap-12 flex flex-col pb-4 md:pb-24 pt-0 md:pt-14 px-2">
         <Card imageSrc={banner1} link="https://www.xingyu.com.br/collections/aurora" />
+        <Card imageSrc={bannerAdded} link="https://chat.whatsapp.com/HCUO7AfGW1x05XHk2fTi1Z" />
         <Card imageSrc={banner2} link="https://chat.whatsapp.com/GgiaeKuxGMB5uSZakNWG2y" />
         <Card imageSrc={banner3} link="https://www.xingyu.com.br/collections/rivieiras" />
         <Card imageSrc={banner4} link="https://chat.whatsapp.com/IvudTWrc6Uz09OBCZR1SGT" />
