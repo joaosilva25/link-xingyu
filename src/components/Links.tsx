@@ -19,7 +19,9 @@ export default function Links() {
         <Card imageSrc={banner5} link="https://chat.whatsapp.com/FzQcBGHEokbHFCfEjjWNJE" />
         <Card imageSrc={banner6} link="https://www.xingyu.com.br/collections/outlet" />
         <Card imageSrc={banner7} link="https://www.xingyu.com.br/collections/venda-mais" />
-        <Card imageSrc={banner10} link="https://wa.me/+5511925694819" />
+        <Card imageSrc={banner10} link="https://wa.me/+5511925694819
+      
+    " />
       </div>
     </section>
   );
