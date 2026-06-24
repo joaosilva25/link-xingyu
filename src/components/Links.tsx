@@ -14,7 +14,7 @@ export default function Links() {
       <div className="max-w-6xl mx-auto gap-12 flex flex-col pb-4 md:pb-24 pt-0 md:pt-14 px-2">
         <Card imageSrc={trendBanner} link="https://www.xingyu.com.br/collections/especial-junho?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=created-descending" />
         <Card imageSrc={banner2} link="https://www.xingyu.com.br" />
-        <Card imageSrc={banner5} link="https://chat.whatsapp.com/FzQcBGHEokbHFCfEjjWNJE" />
+        <Card imageSrc={banner5} link="https://vip.xingyujewelry.com.br/" />
         <Card imageSrc={banner3} link="https://www.xingyu.com.br/collections/rivieiras" />
         <Card imageSrc={banner4} link="https://chat.whatsapp.com/IvudTWrc6Uz09OBCZR1SGT" />
         <Card imageSrc={banner6} link="https://www.xingyu.com.br/collections/outlet" />
