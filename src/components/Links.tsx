@@ -25,15 +25,15 @@ export default function Links() {
   return (
     <section id="links" className="bg-white">
       <div className="max-w-6xl mx-auto gap-12 flex flex-col pb-4 md:pb-24 pt-0 md:pt-14 px-2">
+        {isTopLoading || !topBanner ? (
+          <BannerSkeleton />
+        ) : (
+          <Card imageSrc={topBanner.imageUrl} link={topBanner.link} />
+        )}
         {isTrendLoading || !trendBanner ? (
           <BannerSkeleton />
         ) : (
           <Card imageSrc={trendBanner.imageUrl} link={trendBanner.link} />
-        )}
-         {isTopLoading || !topBanner ? (
-          <BannerSkeleton />
-        ) : (
-          <Card imageSrc={topBanner.imageUrl} link={topBanner.link} />
         )}
         <Card imageSrc={banner2} link="https://www.xingyu.com.br" />
         <Card imageSrc={banner5} link="https://vip.xingyujewelry.com.br/" />
