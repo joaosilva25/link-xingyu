@@ -1,7 +1,5 @@
 {
   "rewrites": [
-    { "source": "/top-banner.json", "destination": "/api/top-banner" },
-    { "source": "/trend-banner.json", "destination": "/api/trend-banner" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }

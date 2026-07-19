@@ -8,7 +8,7 @@ const FALLBACK_CONFIG: TrendBannerConfig = {
   link: 'https://chat.whatsapp.com/GgiaeKuxGMB5uSZakNWG2y',
 };
 
-export const TREND_BANNER_CONFIG_PATH = '/trend-banner.json';
+export const TREND_BANNER_CONFIG_PATH = '/api/trend-banner';
 
 export function useTrendBanner() {
   return useBanner(TREND_BANNER_CONFIG_PATH, FALLBACK_CONFIG);

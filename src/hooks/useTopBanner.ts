@@ -7,5 +7,5 @@ const FALLBACK_CONFIG = {
 };
 
 export function useTopBanner() {
-  return useBanner('/top-banner.json', FALLBACK_CONFIG);
+  return useBanner('/api/top-banner', FALLBACK_CONFIG);
 }
