@@ -58,19 +58,25 @@ async function readBannerConfigFromFilesystem(id: BannerId): Promise<BannerConfi
 
 async function readBannerConfigFromBlob(id: BannerId): Promise<BannerConfig | null> {
   const { blobConfigPath } = getPaths(id);
-  const { blobs } = await list({ prefix: blobConfigPath, limit: 1 });
 
-  if (blobs.length === 0) {
+  try {
+    const { blobs } = await list({ prefix: blobConfigPath, limit: 1 });
+
+    if (blobs.length === 0) {
+      return null;
+    }
+
+    const response = await fetch(blobs[0].url, { cache: 'no-store' });
+    if (!response.ok) {
+      return null;
+    }
+
+    const data = (await response.json()) as Partial<BannerConfig>;
+    return normalizeConfig(id, data);
+  } catch (error) {
+    console.error(`Falha ao ler o banner "${id}" do Vercel Blob:`, error);
     return null;
   }
-
-  const response = await fetch(blobs[0].url, { cache: 'no-store' });
-  if (!response.ok) {
-    return null;
-  }
-
-  const data = (await response.json()) as Partial<BannerConfig>;
-  return normalizeConfig(id, data);
 }
 
 async function writeBannerConfigToFilesystem(id: BannerId, link: string, imageUrl: string) {
