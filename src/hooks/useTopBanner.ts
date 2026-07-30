@@ -1,9 +1,9 @@
-import topBannerFallback from '../assets/BANNERPRINCIPAL.png';
+import topBannerFallback from '../assets/PrimaveraDourada.jpg';
 import { useBanner } from './useBanner';
 
 const FALLBACK_CONFIG = {
   imageUrl: topBannerFallback,
-  link: 'https://www.xingyu.com.br',
+  link: 'https://www.xingyu.com.br/collections/07-2026-colecao-primavera-dourada',
 };
 
 export function useTopBanner() {

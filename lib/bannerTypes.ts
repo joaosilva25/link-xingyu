@@ -14,7 +14,7 @@ export const BANNER_DEFAULTS: Record<BannerId, BannerConfig> = {
   },
   top: {
     imageUrl: '/top-banner.png',
-    link: 'https://www.xingyu.com.br',
+    link: 'https://www.xingyu.com.br/collections/07-2026-colecao-primavera-dourada',
     version: '1',
   },
 };
