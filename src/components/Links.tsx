@@ -38,7 +38,7 @@ export default function Links() {
         )}
         <Card
           imageSrc={bannerChinaNoBrasil}
-          link="https://chinanobrasil.xingyujewelry.com.br/"
+          link="http://chinanobrasil.xingyujewelry.com.br/?utm_source=BIOINSTA&utm_medium=PAGCAPTURA&utm_campaign=CHINANOBRASIL&utm_id=LANCAMENTO"
         />
         <Card imageSrc={banner2} link="https://www.xingyu.com.br" />
         <Card imageSrc={banner5} link="https://vip.xingyujewelry.com.br/" />
