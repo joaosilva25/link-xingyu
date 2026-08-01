@@ -6,6 +6,7 @@ import banner5 from '../assets/BANNER 05.png';
 import banner6 from '../assets/BANNER 06.png';
 import banner7 from '../assets/BANNER 07.png';
 import banner10 from '../assets/BANNER 10.png';
+import bannerChinaNoBrasil from '../assets/BANNER CHINANOBRASIL.png';
 import { useTopBanner } from '../hooks/useTopBanner';
 import { useTrendBanner } from '../hooks/useTrendBanner';
 
@@ -35,6 +36,10 @@ export default function Links() {
         ) : (
           <Card imageSrc={trendBanner.imageUrl} link={trendBanner.link} />
         )}
+        <Card
+          imageSrc={bannerChinaNoBrasil}
+          link="https://chinanobrasil.xingyujewelry.com.br/"
+        />
         <Card imageSrc={banner2} link="https://www.xingyu.com.br" />
         <Card imageSrc={banner5} link="https://vip.xingyujewelry.com.br/" />
         <Card imageSrc={banner3} link="https://www.xingyu.com.br/collections/rivieiras" />
