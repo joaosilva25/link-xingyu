@@ -9,7 +9,7 @@ export type BannerId = 'trend' | 'top';
 export const BANNER_DEFAULTS: Record<BannerId, BannerConfig> = {
   trend: {
     imageUrl: '/trend-banner.png',
-    link: 'https://chat.whatsapp.com/GgiaeKuxGMB5uSZakNWG2y',
+    link: 'https://chinanobrasil.xingyujewelry.com.br/?utm_source=BIOINSTA&utm_medium=PAGCAPTURA&utm_campaign=CHINANOBRASIL&utm_id=LANCAMENTO',
     version: '1',
   },
   top: {
