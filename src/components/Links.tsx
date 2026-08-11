@@ -37,10 +37,6 @@ export default function Links() {
         )}
         <Card imageSrc={banner2} link="https://www.xingyu.com.br" />
         <Card imageSrc={banner5} link="https://vip.xingyujewelry.com.br/" />
-        <Card imageSrc={banner3} link="https://www.xingyu.com.br/collections/rivieiras" />
-        <Card imageSrc={banner4} link="https://chat.whatsapp.com/IvudTWrc6Uz09OBCZR1SGT" />
-        <Card imageSrc={banner6} link="https://www.xingyu.com.br/collections/outlet" />
-        <Card imageSrc={banner7} link="https://www.xingyu.com.br/collections/venda-mais" />
         <Card imageSrc={banner10} link="https://wa.me/+5511925694819" />
       </div>
     </section>
