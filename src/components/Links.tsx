@@ -1,5 +1,5 @@
 import Card from './Card';
-import bannerTrend from '../assets/BANNER CHINANOBRASIL.png';
+import bannerOrigem from '../assets/Banner Origem.png';
 import bannerAltaTemporada from '../assets/BANNER ALTATEMPORADA.png';
 import bannerTop from '../assets/Live.png';
 import banner2 from '../assets/BANNER 02.png';
@@ -15,8 +15,8 @@ export default function Links() {
           link="https://www.xingyu.com.br/collections/brilho-e-sucesso"
         />
         <Card
-          imageSrc={bannerTrend}
-          link="https://chinanobrasil.xingyujewelry.com.br/?utm_source=BIOINSTA&utm_medium=PAGCAPTURA&utm_campaign=CHINANOBRASIL&utm_id=LANCAMENTO"
+          imageSrc={bannerOrigem}
+          link="https://www.xingyu.com.br/collections/origem?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=created-descending&utm_source=BANNERBIO&utm_medium=COLECAO07&utm_campaign=INSTAGRAM&utm_id=CHINANOBRASIL"
         />
         <Card
           imageSrc={bannerAltaTemporada}
