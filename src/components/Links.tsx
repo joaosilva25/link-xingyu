@@ -1,6 +1,7 @@
 import Card from './Card';
 // import bannerOrigem from '../assets/Banner Origem.png';
 import bannerAltaTemporada from '../assets/BANNER ALTATEMPORADA.png';
+import bannerEstoque from '../assets/EstoquesemCrise.png';
 import bannerTop from '../assets/Live.png';
 import banner2 from '../assets/BANNER 02.png';
 import banner5 from '../assets/BANNER 05.png';
@@ -18,6 +19,10 @@ export default function Links() {
           imageSrc={bannerOrigem}
           link="https://www.xingyu.com.br/collections/origem?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=created-descending&utm_source=BANNERBIO&utm_medium=COLECAO07&utm_campaign=INSTAGRAM&utm_id=CHINANOBRASIL"
         /> */}
+         <Card
+          imageSrc={bannerEstoque}
+          link="http://estoquesemcrise.xingyujewelry.com.br/?utm_source=INSTAGRAM&utm_medium=BANNERBIO&utm_campaign=ESC&utm_id=PAGCAPTURA"
+        />
         <Card
           imageSrc={bannerAltaTemporada}
           link="https://oat.xingyujewelry.com.br/?utm_source=BANNER&utm_medium=BIOINSTA&utm_campaign=OATS&utm_id=PAGCAPTURA"
