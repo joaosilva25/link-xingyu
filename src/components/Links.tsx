@@ -1,6 +1,5 @@
 import Card from './Card';
 // import bannerOrigem from '../assets/Banner Origem.png';
-import bannerGoldenSeason from '../assets/BannerGoldenSeason.png';
 import bannerEstoque from '../assets/EstoquesemCrise.png';
 import bannerTop from '../assets/Live.png';
 import banner2 from '../assets/BANNER 02.png';
