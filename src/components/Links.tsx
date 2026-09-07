@@ -20,10 +20,6 @@ export default function Links() {
           link="https://www.xingyu.com.br/collections/origem?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=created-descending&utm_source=BANNERBIO&utm_medium=COLECAO07&utm_campaign=INSTAGRAM&utm_id=CHINANOBRASIL"
         /> */}
          <Card
-          imageSrc={bannerGoldenSeason}
-          link="https://www.xingyu.com.br/collections/colecao-golden-season-27-08-2026?utm_source=BANNER&utm_medium=BIOINSTA&utm_campaign=OATS&utm_id=LANCAMENTO08 "
-        />
-         <Card
           imageSrc={bannerEstoque}
           link="http://estoquesemcrise.xingyujewelry.com.br/?utm_source=INSTAGRAM&utm_medium=BANNERBIO&utm_campaign=ESC&utm_id=PAGCAPTURA"
         />
