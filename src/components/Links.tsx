@@ -2,6 +2,7 @@ import Card from './Card';
 // import bannerOrigem from '../assets/Banner Origem.png';
 import bannerEstoque from '../assets/EstoquesemCrise.png';
 import bannerTop from '../assets/Live.png';
+import bannerLancamento from '../assets/BANNERSEMIJOIASIMPORTADAS.png';
 import banner2 from '../assets/BANNER 02.png';
 import banner5 from '../assets/BANNER 05.png';
 import banner10 from '../assets/BANNER 10.png';
@@ -13,6 +14,10 @@ export default function Links() {
         <Card
           imageSrc={bannerTop}
           link="https://www.xingyu.com.br/collections/brilho-e-sucesso"
+        />
+          <Card
+          imageSrc={bannerLancamento}
+          link="http://si.xingyujewelry.com.br/?utm_source=BANNERBIO&utm_medium=PAGCAPTURA&utm_campaign=10SI&utm_id=LANCAMENTO"
         />
         {/* <Card
           imageSrc={bannerOrigem}
