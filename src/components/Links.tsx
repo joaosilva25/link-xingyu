@@ -56,10 +56,6 @@ export default function Links() {
   return (
     <section id="links" className="bg-white">
       <div className="max-w-6xl mx-auto gap-12 flex flex-col pb-4 md:pb-24 pt-0 md:pt-14 px-2">
-        <Card
-          imageSrc={bannerLancamento}
-          link="http://si.xingyujewelry.com.br/?utm_source=BANNERBIO&utm_medium=PAGCAPTURA&utm_campaign=10SI&utm_id=LANCAMENTO"
-        />
         {/* <Card
           imageSrc={bannerOrigem}
           link="https://www.xingyu.com.br/collections/origem?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=created-descending&utm_source=BANNERBIO&utm_medium=COLECAO07&utm_campaign=INSTAGRAM&utm_id=CHINANOBRASIL"
@@ -67,6 +63,10 @@ export default function Links() {
         <Card
           imageSrc={bannerEstoque}
           link="https://www.xingyu.com.br/collections/momentum/?utm_source=BANNER&utm_medium=BIOINSTA&utm_campaign=9ESC&utm_id=COLECAO "
+        />
+          <Card
+          imageSrc={bannerLancamento}
+          link="http://si.xingyujewelry.com.br/?utm_source=BANNERBIO&utm_medium=PAGCAPTURA&utm_campaign=10SI&utm_id=LANCAMENTO"
         />
         <Card imageSrc={banner2} link="https://www.xingyu.com.br" />
         <Card imageSrc={banner5} link="https://vip.xingyujewelry.com.br/" />
