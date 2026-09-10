@@ -1,5 +1,9 @@
 {
   "rewrites": [
+    {
+      "source": "/xingyu-consultoras/:path*",
+      "destination": "https://consultoras.xingyujewelry.com.br/:path*"
+    },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }

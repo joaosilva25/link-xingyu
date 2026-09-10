@@ -29,9 +29,40 @@ const upload = multer({
 });
 
 const app = express();
+const CONSULTORAS_ORIGIN = 'https://consultoras.xingyujewelry.com.br';
 
 app.use(cors());
 app.use(express.json());
+
+// Proxy do embed/API de consultoras (CORP same-origin impede carga cross-origin)
+app.use('/xingyu-consultoras', async (req, res) => {
+  try {
+    const targetUrl = `${CONSULTORAS_ORIGIN}${req.url}`;
+    const headers = new Headers();
+    const accept = req.get('accept');
+    if (accept) headers.set('accept', accept);
+
+    const init: RequestInit = {
+      method: req.method,
+      headers,
+      redirect: 'follow',
+    };
+
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      headers.set('content-type', req.get('content-type') ?? 'application/json');
+      init.body = JSON.stringify(req.body ?? {});
+    }
+
+    const upstream = await fetch(targetUrl, init);
+    res.status(upstream.status);
+    const contentType = upstream.headers.get('content-type');
+    if (contentType) res.setHeader('Content-Type', contentType);
+    res.send(Buffer.from(await upstream.arrayBuffer()));
+  } catch (error) {
+    console.error('Falha no proxy de consultoras:', error);
+    res.status(502).json({ error: 'Falha ao contatar o serviço de consultoras.' });
+  }
+});
 
 app.post('/api/trend-banner/auth', (req, res) => {
   const auth = checkAdminPassword(req.get('x-admin-password'));

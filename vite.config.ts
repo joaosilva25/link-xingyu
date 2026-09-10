@@ -13,6 +13,12 @@ export default defineConfig({
       '/api': 'http://localhost:3001',
       '/top-banner.json': 'http://localhost:3001',
       '/trend-banner.json': 'http://localhost:3001',
+      // CORP same-origin no domínio das consultoras bloqueia o embed direto
+      '/xingyu-consultoras': {
+        target: 'https://consultoras.xingyujewelry.com.br',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/xingyu-consultoras/, ''),
+      },
     },
   },
 });
