@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
 import Card from './Card';
 // import bannerOrigem from '../assets/Banner Origem.png';
-import bannerEstoque from '../assets/EstoquesemCrise.png';
-import bannerTop from '../assets/Live.png';
+import bannerEstoque from '../assets/BANNER Momentum.png';
 import bannerLancamento from '../assets/BANNERSEMIJOIASIMPORTADAS.png';
 import banner2 from '../assets/BANNER 02.png';
 import banner5 from '../assets/BANNER 05.png';
@@ -58,10 +57,6 @@ export default function Links() {
     <section id="links" className="bg-white">
       <div className="max-w-6xl mx-auto gap-12 flex flex-col pb-4 md:pb-24 pt-0 md:pt-14 px-2">
         <Card
-          imageSrc={bannerTop}
-          link="https://www.xingyu.com.br/collections/brilho-e-sucesso"
-        />
-        <Card
           imageSrc={bannerLancamento}
           link="http://si.xingyujewelry.com.br/?utm_source=BANNERBIO&utm_medium=PAGCAPTURA&utm_campaign=10SI&utm_id=LANCAMENTO"
         />
@@ -71,7 +66,7 @@ export default function Links() {
         /> */}
         <Card
           imageSrc={bannerEstoque}
-          link="http://estoquesemcrise.xingyujewelry.com.br/?utm_source=INSTAGRAM&utm_medium=BANNERBIO&utm_campaign=ESC&utm_id=PAGCAPTURA"
+          link="https://www.xingyu.com.br/collections/momentum/?utm_source=BANNER&utm_medium=BIOINSTA&utm_campaign=9ESC&utm_id=COLECAO "
         />
         <Card imageSrc={banner2} link="https://www.xingyu.com.br" />
         <Card imageSrc={banner5} link="https://vip.xingyujewelry.com.br/" />
