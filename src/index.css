@@ -69,3 +69,27 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #f97316;
 }
+
+/* Force consultant popup centered (embed mobile CSS pins it to the bottom) */
+.xingyu-consultant-popup.xingyu-consultant-popup {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  place-items: center !important;
+}
+
+.xingyu-consultant-popup .xingyu-consultant-popup__dialog {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: min(calc(100vw - 24px), 28rem) !important;
+  max-height: calc(100dvh - 24px) !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.xingyu-consultant-popup.is-open .xingyu-consultant-popup__dialog {
+  transform: translate(-50%, -50%) !important;
+}

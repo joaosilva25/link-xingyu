@@ -15,6 +15,36 @@ const CONSULTORA_TRIGGER_ID = 'falar-com-consultora';
 
 export default function Links() {
   useEffect(() => {
+    const STYLE_ID = 'xingyu-consultant-popup-center';
+    if (!document.getElementById(STYLE_ID)) {
+      const style = document.createElement('style');
+      style.id = STYLE_ID;
+      // Força centro mesmo com o CSS do embed (mobile usa align-items:end)
+      style.textContent = `
+        .xingyu-consultant-popup {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          place-items: center !important;
+        }
+        .xingyu-consultant-popup__dialog {
+          position: fixed !important;
+          top: 50% !important;
+          left: 50% !important;
+          right: auto !important;
+          bottom: auto !important;
+          width: min(calc(100vw - 24px), 28rem) !important;
+          max-height: calc(100dvh - 24px) !important;
+          margin: 0 !important;
+          transform: translate(-50%, -50%) !important;
+        }
+        .xingyu-consultant-popup.is-open .xingyu-consultant-popup__dialog {
+          transform: translate(-50%, -50%) !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
     if (document.querySelector(`script[src="${CONSULTORA_SCRIPT_SRC}"]`)) return;
 
     const script = document.createElement('script');
