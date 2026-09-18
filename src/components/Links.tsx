@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Card from './Card';
 // import bannerOrigem from '../assets/Banner Origem.png';
-import bannerEstoque from '../assets/BANNER Momentum.png';
 import bannerLancamento from '../assets/BANNERSEMIJOIASIMPORTADAS.png';
 import banner2 from '../assets/BANNER 02.png';
 import banner5 from '../assets/BANNER 05.png';
