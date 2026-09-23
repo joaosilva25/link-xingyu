@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Card from './Card';
-// import bannerOrigem from '../assets/Banner Origem.png';
+import bannerBlackFriday from '../assets/BANNER BIO BlackFriday.png';
 import bannerLancamento from '../assets/BANNERSEMIJOIASIMPORTADAS.png';
 import banner2 from '../assets/BANNER 02.png';
 import banner5 from '../assets/BANNER 05.png';
@@ -59,6 +59,10 @@ export default function Links() {
           imageSrc={bannerOrigem}
           link="https://www.xingyu.com.br/collections/origem?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=created-descending&utm_source=BANNERBIO&utm_medium=COLECAO07&utm_campaign=INSTAGRAM&utm_id=CHINANOBRASIL"
         /> */}
+           <Card
+          imageSrc={bannerBlackFriday}
+          link="http://ab.xingyujewelry.com.br/?utm_source=BANNERINSTA&utm_medium=BIOCAPTURA&utm_campaign=11AB&utm_id=LANCAMENTO"
+        />
           <Card
           imageSrc={bannerLancamento}
           link="http://si.xingyujewelry.com.br/?utm_source=BANNERBIO&utm_medium=PAGCAPTURA&utm_campaign=10SI&utm_id=LANCAMENTO"
