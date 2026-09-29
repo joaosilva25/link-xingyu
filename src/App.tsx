@@ -1,7 +1,7 @@
 import Hero from './components/hero';
 import Links from './components/Links';
 import Footer from './components/Footer';
-import TrendBannerAdmin from './pages/TrendBannerAdmin';
+import TrendBannerAdmin from './legacy/TrendBannerAdmin';
 import VideoPage from './pages/VideoPage';
 import { isAdminRoute } from './config/adminRoute';
 

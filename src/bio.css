@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Joly Display";
+  src: url("./fonts/fonnts.com-Joly_Display_Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Joly Display";
+  src: url("./fonts/fonnts.com-Joly_Display_Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Joly Display";
+  src: url("./fonts/fonnts.com-Joly_Display_Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Joly Display";
+  src: url("./fonts/fonnts.com-Joly_Display_Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bio-page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+html:has(.bio-page) {
+  scrollbar-width: thin;
+  scrollbar-color: #fdba74 white;
+}
+
+html:has(.bio-page)::-webkit-scrollbar {
+  width: 4px;
+}
+
+html:has(.bio-page)::-webkit-scrollbar-track {
+  background: white;
+}
+
+html:has(.bio-page)::-webkit-scrollbar-thumb {
+  background: #fdba74;
+  border-radius: 10px;
+}
+
+html:has(.bio-page)::-webkit-scrollbar-thumb:hover {
+  background: #f97316;
+}
+
+.xingyu-consultant-popup.xingyu-consultant-popup {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  place-items: center !important;
+}
+
+.xingyu-consultant-popup .xingyu-consultant-popup__dialog {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: min(calc(100vw - 24px), 28rem) !important;
+  max-height: calc(100dvh - 24px) !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.xingyu-consultant-popup.is-open .xingyu-consultant-popup__dialog {
+  transform: translate(-50%, -50%) !important;
+}

@@ -1,23 +1,42 @@
+'use client';
+
 import { useEffect } from 'react';
 import Card from './Card';
+import type { Banner } from '@/types/banner';
 import bannerBlackFriday from '../assets/BANNER BIO BlackFriday.png';
 import bannerLancamento from '../assets/BANNER BIO - Lunar.png';
 import banner2 from '../assets/BANNER 02.png';
 import banner5 from '../assets/BANNER 05.png';
 import banner10 from '../assets/BANNER 10.png';
 
+function assetSrc(asset: string | { src: string }) {
+  return typeof asset === 'string' ? asset : asset.src;
+}
+
 // Mesma origem via proxy — o domínio das consultoras usa CORP same-origin
 const CONSULTORA_SCRIPT_SRC = '/xingyu-consultoras/embed/xingyu-popup.js';
 const CONSULTORA_API_URL = '/xingyu-consultoras';
 const CONSULTORA_TRIGGER_ID = 'falar-com-consultora';
 
-export default function Links() {
+const FALLBACK_BANNERS = [
+  {
+    imageSrc: assetSrc(bannerLancamento),
+    link: 'https://www.xingyu.com.br/collections/colecao-lunar?utm_source=BANNER&utm_medium=INSTABIO&utm_campaign=10SI&utm_id=COLECAOLUNAR',
+  },
+  {
+    imageSrc: assetSrc(bannerBlackFriday),
+    link: 'http://ab.xingyujewelry.com.br/?utm_source=BANNERINSTA&utm_medium=BIOCAPTURA&utm_campaign=11AB&utm_id=LANCAMENTO',
+  },
+  { imageSrc: assetSrc(banner2), link: 'https://www.xingyu.com.br' },
+  { imageSrc: assetSrc(banner5), link: 'https://vip.xingyujewelry.com.br/' },
+];
+
+export default function Links({ banners }: { banners?: Banner[] }) {
   useEffect(() => {
     const STYLE_ID = 'xingyu-consultant-popup-center';
     if (!document.getElementById(STYLE_ID)) {
       const style = document.createElement('style');
       style.id = STYLE_ID;
-      // Força centro mesmo com o CSS do embed (mobile usa align-items:end)
       style.textContent = `
         .xingyu-consultant-popup {
           display: flex !important;
@@ -52,24 +71,25 @@ export default function Links() {
     document.body.appendChild(script);
   }, []);
 
+  const fromCms = banners !== undefined;
+
   return (
     <section id="links" className="bg-white">
       <div className="max-w-6xl mx-auto gap-12 flex flex-col pb-4 md:pb-24 pt-0 md:pt-14 px-2">
-        {/* <Card
-          imageSrc={bannerOrigem}
-          link="https://www.xingyu.com.br/collections/origem?filter.v.availability=1&filter.v.price.gte=&filter.v.price.lte=&sort_by=created-descending&utm_source=BANNERBIO&utm_medium=COLECAO07&utm_campaign=INSTAGRAM&utm_id=CHINANOBRASIL"
-        /> */}
-        <Card
-          imageSrc={bannerLancamento}
-          link="https://www.xingyu.com.br/collections/colecao-lunar?utm_source=BANNER&utm_medium=INSTABIO&utm_campaign=10SI&utm_id=COLECAOLUNAR"
-        />
-           <Card
-          imageSrc={bannerBlackFriday}
-          link="http://ab.xingyujewelry.com.br/?utm_source=BANNERINSTA&utm_medium=BIOCAPTURA&utm_campaign=11AB&utm_id=LANCAMENTO"
-        />
-        <Card imageSrc={banner2} link="https://www.xingyu.com.br" />
-        <Card imageSrc={banner5} link="https://vip.xingyujewelry.com.br/" />
-        <Card imageSrc={banner10} id={CONSULTORA_TRIGGER_ID} />
+        {fromCms
+          ? banners.map((banner) => (
+              <Card
+                key={banner.id}
+                imageSrc={banner.image_url}
+                link={banner.destination_url ? `/r/${banner.id}` : undefined}
+                newTab={banner.open_new_tab}
+                label={banner.alt_text || banner.internal_name}
+              />
+            ))
+          : FALLBACK_BANNERS.map((banner) => (
+              <Card key={banner.link} imageSrc={banner.imageSrc} link={banner.link} />
+            ))}
+        <Card imageSrc={assetSrc(banner10)} id={CONSULTORA_TRIGGER_ID} />
       </div>
     </section>
   );

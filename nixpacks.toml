@@ -1,0 +1,6 @@
+[variables]
+NIXPACKS_NODE_VERSION = "22"
+NEXT_TELEMETRY_DISABLED = "1"
+
+[start]
+cmd = "npm run start -- -H 0.0.0.0 -p ${PORT:-3000}"
